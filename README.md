@@ -4,3 +4,4 @@
 
 ## Do poprawienia:
 - Stworzyć diagram w Visual Paradigm
+- Poprawić diagram na podstawie notatek, które ma Alicja :P
