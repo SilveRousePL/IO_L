@@ -5,5 +5,3 @@ http://zofia.kruczkiewicz.staff.iiar.pwr.wroc.pl/index.php?id=INEK011
 - Drukować **DWUSTRONNIE!**
 
 ## Do poprawienia:
-- Stworzyć diagram w Visual Paradigm
-- Poprawić diagram na podstawie notatek, które ma Alicja :P
