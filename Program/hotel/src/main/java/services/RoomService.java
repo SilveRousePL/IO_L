@@ -10,20 +10,25 @@ public class RoomService {
 
     private RoomDAO roomDAO = Config.roomDAO;
 
-    public boolean addRoom(Room room){
-        return roomDAO.addRoom(room);
+    public Room addRoom(Room room){
+        if(roomDAO.findRoom(room) == null)
+            return roomDAO.addRoom(room);
+        return room;
     }
 
-    public boolean removeRoom(Room room) {
-        return roomDAO.removeRoom(room);
+    public void removeRoom(Room room) {
+        if(roomDAO.findRoom(room)  != null)
+            roomDAO.removeRoom(room);
     }
 
-    public boolean modifyRoom(Room room) {
+    public Room modifyRoom(Room room) {
+        if(roomDAO.findRoom(room) == null)
+            return roomDAO.addRoom(room);
         return roomDAO.modifyRoom(room);
     }
 
-    public Room findRoom(Long id) {
-        return roomDAO.findRoom(id);
+    public Room findRoom(Room room) {
+        return roomDAO.findRoom(room);
     }
 
     public List<Room> getAllRooms() {

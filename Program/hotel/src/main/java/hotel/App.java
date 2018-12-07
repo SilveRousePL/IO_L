@@ -4,12 +4,14 @@ import Config.Config;
 import entities.Client;
 import services.ClientService;
 import services.ReservationService;
+import services.RoomService;
 
 import javax.swing.*;
 public class App extends JFrame {
 
     private ReservationService reservationService = Config.reservationService;
     private ClientService clientService = Config.clientService;
+    private RoomService roomService = Config.roomService;
 
 
     public App() {

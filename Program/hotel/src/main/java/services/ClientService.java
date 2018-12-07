@@ -10,20 +10,25 @@ public class ClientService {
 
     private ClientDAO clientDAO = Config.clientDAO;
 
-    public boolean addClient(Client client){
-        return clientDAO.addClient(client);
+    public Client addClient(Client client){
+        if(clientDAO.findClient(client) == null)
+            return clientDAO.addClient(client);
+        return client;
     }
 
-    public boolean removeClient(Client client) {
-        return clientDAO.removeClient(client);
+    public void removeClient(Client client) {
+        if(clientDAO.findClient(client) != null)
+            clientDAO.removeClient(client);
     }
 
-    public boolean modifyClient(Client client) {
+    public Client modifyClient(Client client) {
+        if(clientDAO.findClient(client) == null)
+            return clientDAO.addClient(client);
         return clientDAO.modifyClient(client);
     }
 
-    public Client findClient(Long id) {
-        return clientDAO.findClient(id);
+    public Client findClient(Client client) {
+        return clientDAO.findClient(client);
     }
 
     public List<Client> getAllClients() {

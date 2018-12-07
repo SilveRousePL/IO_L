@@ -10,20 +10,25 @@ public class ReservationService {
 
     private ReservationDAO reservationDAO = Config.reservationDAO;
 
-    public boolean addReservation(Reservation reservation){
+    public Reservation addReservation(Reservation reservation){
+        if(reservationDAO.findReservation(reservation) != null)
+            return reservation;
         return reservationDAO.addReservation(reservation);
     }
 
-    public boolean removeReservation(Reservation reservation) {
-        return reservationDAO.removeReservation(reservation);
+    public void removeReservation(Reservation reservation) {
+        if(reservationDAO.findReservation(reservation) != null)
+            reservationDAO.removeReservation(reservation);
     }
 
-    public boolean modifyReservation(Reservation reservation) {
+    public Reservation modifyReservation(Reservation reservation) {
+        if(reservationDAO.findReservation(reservation) == null)
+            reservationDAO.addReservation(reservation);
         return reservationDAO.modifyReservation(reservation);
     }
 
-    public Reservation findReservation(Long id) {
-        return reservationDAO.findReservation(id);
+    public Reservation findReservation(Reservation reservation) {
+        return reservationDAO.findReservation(reservation);
     }
 
     public List<Reservation> getAllReservation() {

@@ -11,57 +11,53 @@ public class ClientDAO {
 
     private SessionFactory sessionFactory = Config.sessionFactory;
 
-    public boolean addClient(Client client){
+    public Client addClient(Client client){
         Session session = sessionFactory.getCurrentSession();
-        boolean success;
+        Client newClient = null;
         try {
             session.beginTransaction();
             session.save(client);
             session.getTransaction().commit();
-            success = true;
+            newClient = client;
         }
         finally {
             session.close();
         }
-        return success;
+        return newClient;
     }
 
-    public boolean removeClient(Client client) {
+    public void removeClient(Client client) {
         Session session = sessionFactory.getCurrentSession();
-        boolean success;
         try {
             session.beginTransaction();
             session.remove(client);
             session.getTransaction().commit();
-            success = true;
         }
         finally {
             session.close();
         }
-        return success;
     }
 
-    public boolean modifyClient(Client client) {
+    public Client modifyClient(Client client) {
         Session session = sessionFactory.getCurrentSession();
-        boolean success;
+        Client newClient = null;
         try {
             session.beginTransaction();
             session.update(client);
             session.getTransaction().commit();
-            success = true;
+            newClient = client;
         }
         finally {
             session.close();
         }
-        return success;
+        return newClient;
     }
 
-    public Client findClient(Long id) {
+    public Client findClient(Client client) {
         Session session = sessionFactory.getCurrentSession();
-        Client client;
         try {
             session.beginTransaction();
-            client = session.get(Client.class, id);
+            client = session.get(Client.class, client);
             session.getTransaction().commit();
         }
         finally {

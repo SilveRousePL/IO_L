@@ -11,63 +11,60 @@ public class RoomDAO {
 
     private SessionFactory sessionFactory = Config.sessionFactory;
 
-    public boolean addRoom(Room room){
+    public Room addRoom(Room room){
         Session session = sessionFactory.getCurrentSession();
-        boolean success;
+        Room newRoom;
         try {
             session.beginTransaction();
             session.save(room);
             session.getTransaction().commit();
-            success = true;
-        }
-        finally {
-            session.close();
-        }
-        return success;
-    }
-
-    public boolean removeRoom(Room room) {
-        Session session = sessionFactory.getCurrentSession();
-        boolean success;
-        try {
-            session.beginTransaction();
-            session.remove(room);
-            session.getTransaction().commit();
-            success = true;
-        }
-        finally {
-            session.close();
-        }
-        return success;
-    }
-
-    public boolean modifyRoom(Room room) {
-        Session session = sessionFactory.getCurrentSession();
-        boolean success;
-        try {
-            session.beginTransaction();
-            session.update(room);
-            session.getTransaction().commit();
-            success = true;
-        }
-        finally {
-            session.close();
-        }
-        return success;
-    }
-
-    public Room findRoom(Long id) {
-        Session session = sessionFactory.getCurrentSession();
-        Room room;
-        try {
-            session.beginTransaction();
-            room = session.get(Room.class, id);
-            session.getTransaction().commit();
+            newRoom = room;
         }
         finally {
             session.close();
         }
         return room;
+    }
+
+    public void removeRoom(Room room) {
+        Session session = sessionFactory.getCurrentSession();
+        try {
+            session.beginTransaction();
+            session.remove(room);
+            session.getTransaction().commit();
+        }
+        finally {
+            session.close();
+        }
+    }
+
+    public Room modifyRoom(Room room) {
+        Session session = sessionFactory.getCurrentSession();
+        Room newRoom;
+        try {
+            session.beginTransaction();
+            session.update(room);
+            session.getTransaction().commit();
+            newRoom = room;
+        }
+        finally {
+            session.close();
+        }
+        return newRoom;
+    }
+
+    public Room findRoom(Room room) {
+        Session session = sessionFactory.getCurrentSession();
+        Room newRoom;
+        try {
+            session.beginTransaction();
+            newRoom = session.get(Room.class, room);
+            session.getTransaction().commit();
+        }
+        finally {
+            session.close();
+        }
+        return newRoom;
     }
 
     public List<Room> getAllRooms() {

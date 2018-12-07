@@ -13,7 +13,7 @@ import services.RoomService;
 
 public class Config {
 
-    public static SessionFactory sessionFactory() {
+    private static SessionFactory sessionFactory() {
         SessionFactory sessionFactory = new org.hibernate.cfg.Configuration().configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Room.class)
                 .addAnnotatedClass(Reservation.class)
@@ -22,14 +22,14 @@ public class Config {
         return sessionFactory;
     }
 
-    public static SessionFactory sessionFactory =  sessionFactory();
+    public static final SessionFactory sessionFactory =  sessionFactory();
 
-    public static ReservationDAO reservationDAO = new ReservationDAO();
-    public static ReservationService reservationService = new ReservationService();
+    public static final ReservationDAO reservationDAO = new ReservationDAO();
+    public static final ReservationService reservationService = new ReservationService();
 
-    public static ClientDAO clientDAO = new ClientDAO();
-    public static ClientService clientService = new ClientService();
+    public static final ClientDAO clientDAO = new ClientDAO();
+    public static final ClientService clientService = new ClientService();
 
-    public static RoomDAO roomDAO = new RoomDAO();
-    public static RoomService roomService = new RoomService();
+    public static final RoomDAO roomDAO = new RoomDAO();
+    public static final RoomService roomService = new RoomService();
 }

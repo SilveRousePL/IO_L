@@ -11,63 +11,60 @@ public class ReservationDAO {
 
     private SessionFactory sessionFactory = Config.sessionFactory;
 
-    public boolean addReservation(Reservation reservation){
+    public Reservation addReservation(Reservation reservation){
         Session session = sessionFactory.getCurrentSession();
-        boolean success;
+        Reservation newReservation1 = null;
         try {
             session.beginTransaction();
             session.save(reservation);
             session.getTransaction().commit();
-            success = true;
+            newReservation1 = reservation;
         }
         finally {
             session.close();
         }
-        return success;
+        return newReservation1;
     }
 
-    public boolean removeReservation(Reservation reservation) {
+    public void removeReservation(Reservation reservation) {
         Session session = sessionFactory.getCurrentSession();
-        boolean success;
         try {
             session.beginTransaction();
             session.remove(reservation);
             session.getTransaction().commit();
-            success = true;
         }
         finally {
             session.close();
         }
-        return success;
     }
 
-    public boolean modifyReservation(Reservation reservation) {
+    public Reservation modifyReservation(Reservation reservation) {
         Session session = sessionFactory.getCurrentSession();
-        boolean success;
+        Reservation newReservation = null;
         try {
             session.beginTransaction();
             session.update(reservation);
             session.getTransaction().commit();
-            success = true;
+            newReservation = reservation;
         }
         finally {
             session.close();
         }
-        return success;
+        return newReservation;
     }
 
-    public Reservation findReservation(Long id) {
+    public Reservation findReservation(Reservation reservation) {
         Session session = sessionFactory.getCurrentSession();
-        Reservation reservation;
+        Reservation newReservation;
         try {
             session.beginTransaction();
-            reservation = session.get(Reservation.class, id);
+            newReservation = session.get(Reservation.class, reservation);
             session.getTransaction().commit();
         }
         finally {
             session.close();
         }
-        return reservation;
+        return newReservation;
     }
 
     public List<Reservation> getAllReservation() {
