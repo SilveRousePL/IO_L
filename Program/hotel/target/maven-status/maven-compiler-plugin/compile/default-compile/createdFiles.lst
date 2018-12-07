@@ -1,0 +1,5 @@
+entities\Reservation.class
+entities\Client.class
+hotel\App.class
+Config\HibernateConfig.class
+entities\Room.class
