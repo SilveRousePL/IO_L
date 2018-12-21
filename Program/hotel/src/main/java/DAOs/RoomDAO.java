@@ -1,9 +1,11 @@
 package DAOs;
 
 import Config.Config;
+import entities.Client;
 import entities.Room;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 
 import java.util.List;
 
@@ -55,16 +57,19 @@ public class RoomDAO {
 
     public Room findRoom(Room room) {
         Session session = sessionFactory.getCurrentSession();
-        Room newRoom;
+        List<Room> results;
         try {
             session.beginTransaction();
-            newRoom = session.get(Room.class, room);
-            session.getTransaction().commit();
+            Query query = session.createQuery("SELECT R FROM Room R WHERE R.roomNumber = :room_number");
+            query.setParameter("room_number", room.getRoomNumber());
+            results = query.list();
         }
         finally {
             session.close();
         }
-        return newRoom;
+        if(results != null && results.size() > 0)
+            return results.get(0);
+        return null;
     }
 
     public List<Room> getAllRooms() {

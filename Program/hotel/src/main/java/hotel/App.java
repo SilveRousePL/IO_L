@@ -31,34 +31,6 @@ public class App extends JFrame {
     }
 
 
-    private List<Client> clientsManagement(int option, Client client){
-
-	switch(option) {
-	case 1:
-	{
-	   return Arrays.asList(clientService.addClient(client));
-	}
-	case 2:
-	{
-	   removeClient(client);
-	   return null;
-	}
-	case 3:
-	{
-	   return Arrays.asList(clientService.modifyClient(client));
-	}
-	case 4:
-	{
-	   return Arrays.asList(clientService.findClient(client));
-	}
-	case 5:
-	{
-	   return clientService.getAllClients();
-	}
-	}
-    }
-
-
     private void test() {
         Client client = new Client();
         client.setFirstName("Wojtek");
