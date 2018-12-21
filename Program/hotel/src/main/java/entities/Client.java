@@ -9,7 +9,6 @@ import java.io.Serializable;
 
 @Entity
 @Data
-@Table(name = "client")
 public class Client implements Serializable {
 
     @Id
