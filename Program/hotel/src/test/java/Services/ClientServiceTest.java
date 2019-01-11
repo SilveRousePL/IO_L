@@ -19,6 +19,8 @@ public class ClientServiceTest {
 
     @Mock
     Config config;
+    @Mock
+    ClientDAO clientDAO;
 
     @InjectMocks
     ClientService clientService;
