@@ -37,4 +37,16 @@ public class TClientService {
         Assert.assertNull(clientDAO.addClient(myClient));
     }
 
+    @Test
+    public void whenAddClientWithoutLastNameReturnedClientIsNull() {
+        myClient.setLastName("");
+        Assert.assertNull(clientDAO.addClient(myClient));
+    }
+
+    @Test
+    public void whenAddClientFirstNameNullReturnedClientIsNull() {
+        myClient.setFirstName(null);
+        Assert.assertNull(clientDAO.addClient(myClient));
+    }
+
 }
