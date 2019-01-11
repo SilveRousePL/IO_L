@@ -1,21 +1,27 @@
-package DAOs;
+package Services;
 
 import Config.Config;
+import DAOs.ClientDAO;
 import entities.Client;
-import org.junit.*;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
-import org.mockito.*;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.mockito.runners.MockitoJUnitRunner;
+import services.ClientService;
 
 @RunWith(MockitoJUnitRunner.class)
-public class ClientDAOTest {
+public class ClientServiceTest {
 
     @Mock
     Config config;
 
     @InjectMocks
-    ClientDAO clientDAO;
+    ClientService clientService;
 
     private boolean mockInitialized = false;
     private Client client, newClient;
@@ -40,34 +46,34 @@ public class ClientDAOTest {
 
     @Test
     public void whenDatabaseIsNotEmptyThenReturnedClientIsNotNull(){
-        Client savedClient = clientDAO.addClient(client);
-        Assert.assertNotNull(clientDAO.findClient(newClient));
-        clientDAO.removeClient(savedClient);
+        Client savedClient = clientService.addClient(client);
+        Assert.assertNotNull(clientService.findClient(newClient));
+        clientService.removeClient(savedClient);
     }
 
     @Test
     public void whenDatabaseIsEmptyThenReturnedClientIsNull(){
-        Assert.assertNull(clientDAO.findClient(newClient));
+        Assert.assertNull(clientService.findClient(newClient));
     }
 
     @Test
     public void whenClientCreatedThenReturnNotNull() {
-        Assert.assertNotNull(clientDAO.addClient(newClient));
-        Client savedClient = clientDAO.findClient(newClient);
-        clientDAO.removeClient(savedClient);
+        Assert.assertNotNull(clientService.addClient(newClient));
+        Client savedClient = clientService.findClient(newClient);
+        clientService.removeClient(savedClient);
     }
 
     @Test
     public void whenClientCreatedThenReturnedCorrectly() {
-        Client savedClient = clientDAO.addClient(newClient);
+        Client savedClient = clientService.addClient(newClient);
         Assert.assertEquals(savedClient, newClient);
-        clientDAO.removeClient(savedClient);
+        clientService.removeClient(savedClient);
     }
 
     @Test
     public void whenClientDeletedThenRemovedCorrectly() {
-        Client savedClient = clientDAO.addClient(newClient);
-        clientDAO.removeClient(savedClient);
-        Assert.assertTrue(clientDAO.getAllClients().size() == 0);
+        Client savedClient = clientService.addClient(newClient);
+        clientService.removeClient(savedClient);
+        Assert.assertTrue(clientService.getAllClients().size() == 0);
     }
 }
