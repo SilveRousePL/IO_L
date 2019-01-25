@@ -1,0 +1,13 @@
+---
+Test
+---
+!|fitness.Test_dodawania_filmu|
+|dane																			|dodaj_film? |liczba_filmow? |
+|10,"Skazani na Shawshank",1994,"USA","Frank Darabont"							|true        |1              |
+|20,"Nietykalni",2011,"Francja","	Olivier Nakache"							|true        |2              |
+|10,"Zielona Mila",1999,"USA","Frank Darabont"									|false       |2              |
+|20,"2019",2001,"USA","Francis Ford Coppola"									|false       |2              |
+|30,"Ojciec chrzestny",1972,"USA","Francis Ford Coppola"						|true        |3              |
+|40,"2018",2001,"USA","Francis Ford Coppola"									|true        |4              |
+|50,"Dwunastu gniewnych ludzi","BŁĘDNE DANE","USA","Sidney Lumet"				|false       |4              |
+|60,"Forrest Gump","BŁĘDNE DANE","USA","Robert Zemeckis"						|false       |4              |

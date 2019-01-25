@@ -8,8 +8,8 @@ public class Test {
 
         Room newRoom = new Room();
 
-        if(room == null)
-
+        /*if(room == null)
+*/  return
     }
 
 }

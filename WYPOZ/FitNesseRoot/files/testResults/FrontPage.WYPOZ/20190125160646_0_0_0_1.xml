@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20181224</FitNesseVersion>
+  <rootPath>FrontPage.WYPOZ</rootPath>
+  <pageHistoryReference>
+    <name>FrontPage.WYPOZ.DodawanieFilmu</name>
+    <date>2019-01-25T16:06:46+01:00</date>
+    <pageHistoryLink>FrontPage.WYPOZ.DodawanieFilmu?pageHistory&amp;resultDate=20190125160646</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>2</exceptions>
+    </counts>
+    <runTimeInMillis>3</runTimeInMillis>
+  </pageHistoryReference>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp /media/LINUX_DATA/USER_DATA/Projekty/WYPOZ/fitnesse-standalone.jar:target/test-classes fit.FitServer DAREK-DELL-LINUX 46599 3863</command>
+    <exitCode>2</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>452</totalRunTimeInMillis>
+</suiteResults>
+

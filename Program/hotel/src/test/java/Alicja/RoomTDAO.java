@@ -8,6 +8,6 @@ public class RoomTDAO {
         if(room == null) {
             return null;
         }
-        if(R)
+        /*if(R)*/
     }
 }

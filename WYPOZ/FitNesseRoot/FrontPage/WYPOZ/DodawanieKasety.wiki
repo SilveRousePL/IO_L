@@ -1,0 +1,18 @@
+---
+Test
+---
+!include DodawanieFilmu
+!|fitness.Test_dodawania_kasety|
+|dane			|id_filmu	|dodaj_kasete?	|liczba_kaset?	|
+|10, 123456		|10			|true         	|1            	|
+|20, 999999		|10			|true         	|2            	|
+|30, 987654		|20			|true         	|1            	|
+|40, 111111		|30			|true         	|1            	|
+|50, 121212		|40			|true         	|1            	|
+|60, 434343		|50			|false        	|0            	|
+|70, 112211		|60			|false        	|0            	|
+|80, 777777		|70			|false        	|0            	|
+|70, 555555		|60			|false        	|0            	|
+|80, 545454		|70			|false        	|0            	|
+|90, 171717		|80			|false        	|0            	|
+|91, 665566		|90			|false        	|0            	|

@@ -1,0 +1,13 @@
+---
+Test
+---
+!|fitness.Test_dodawania_uzytkownika|
+|dane                                                               						|dodaj_uzytkownika?	|liczba_uzytkownikow?|
+|10,"Urszula","Jaworska","ul. Wyspa Piasek 105 50-266 Wrocław",98100542320 					|true              	|1                   |
+|20,"Marik","Borkowski","ul. Księdza Pawlickiego Stefana 56 30-320 Kraków",02220969774		|true              	|2                   |
+|30,"Genowefa","Zielinska","ul. Ślazowa 5 04-728 Warszawa",02271907167						|true              	|3                   |
+|40,"Angelika","Czerwinska","Wiosenna 15/4",12121234343										|true              	|4                   |
+|20,"Andrzej","Nowak","Kromera 12/5 Wrocław",12345612345									|false             	|4                   |
+|30,"Tadeusz","Iksiński","Wolności 42 Kłodzko",94121007794									|false             	|4                   |
+|50,"Jonasz","Godziniak","Wiosenna 15/4","abcdefghijk"										|false             	|4                   |
+|60,"Andrzej","Nowak","Kromera 12/5 Wrocław","nie pesel"									|false             	|4                   |

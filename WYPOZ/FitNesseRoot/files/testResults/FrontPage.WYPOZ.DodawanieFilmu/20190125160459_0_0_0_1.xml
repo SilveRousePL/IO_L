@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20181224</FitNesseVersion>
+  <rootPath>FrontPage.WYPOZ.DodawanieFilmu</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>2</exceptions>
+    </counts>
+    <date>2019-01-25T16:04:59+01:00</date>
+    <runTimeInMillis>16</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="FrontPage.WYPOZ.SetUp"&gt;.FrontPage.WYPOZ.SetUp&lt;/a&gt; &lt;a href="FrontPage.WYPOZ.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;SetUp&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.NoClassDefFoundError: WYPOZ/TFacade
+	at SetUp.&lt;init&gt;(SetUp.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at fit.FixtureClass.newInstance(FixtureClass.java:24)
+	at fit.FixtureLoader.instantiateFixture(FixtureLoader.java:61)
+	at fit.FixtureLoader.instantiateFirstValidFixtureClass(FixtureLoader.java:82)
+	at fit.FixtureLoader.disgraceThenLoad(FixtureLoader.java:43)
+	at fit.Fixture.loadFixture(Fixture.java:142)
+	at fit.Fixture.getLinkedFixtureWithArgs(Fixture.java:134)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+Caused by: java.lang.ClassNotFoundException: WYPOZ.TFacade
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 16 more
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3" class="error"&gt;testy_fitness.Test_dodawania_filmu&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: testy_fitness.Test_dodawania_filmu.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;dane&lt;/td&gt;
+		&lt;td&gt;dodaj_film?&lt;/td&gt;
+		&lt;td&gt;liczba_filmow?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10,"Ant-Man",2015,"USA","Peyton Reed"&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;20,"Avatar",2009,"USA","James Cameron"&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10,"Pojutrze",2004,"USA","Roland Emmerich"&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;20,"2012",2009,"USA","Roland Emmerich"&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;30,"Pojutrze",2004,"USA","Roland Emmerich"&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;40,"2012",2009,"USA","Roland Emmerich"&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;50,"Czas surferów","nie liczba","Polska","Jacek Gąsiorowski"&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;60,"Job, czyli ostatnia szara komórka","nie data","Polska","Konrad Niewolski"&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>DodawanieFilmu</relativePageName>
+          </result>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>16</totalRunTimeInMillis>
+</testResults>
+

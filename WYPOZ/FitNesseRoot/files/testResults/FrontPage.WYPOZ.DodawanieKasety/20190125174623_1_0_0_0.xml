@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20181224</FitNesseVersion>
+  <rootPath>FrontPage.WYPOZ.DodawanieKasety</rootPath>
+    <result>
+    <counts>
+      <right>40</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2019-01-25T17:46:23+01:00</date>
+    <runTimeInMillis>20</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="FrontPage.WYPOZ.SetUp"&gt;.FrontPage.WYPOZ.SetUp&lt;/a&gt; &lt;a href="FrontPage.WYPOZ.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;fitness.SetUp&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;div class="collapsible"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="FrontPage.WYPOZ.DodawanieFilmu"&gt;DodawanieFilmu&lt;/a&gt; &lt;a href="FrontPage.WYPOZ.DodawanieFilmu?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3"&gt;fitness.Test_dodawania_filmu&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;dane&lt;/td&gt;
+		&lt;td&gt;dodaj_film?&lt;/td&gt;
+		&lt;td&gt;liczba_filmow?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10,"Skazani na Shawshank",1994,"USA","Frank Darabont"&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;1&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;20,"Nietykalni",2011,"Francja","	Olivier Nakache"&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10,"Zielona Mila",1999,"USA","Frank Darabont"&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="pass"&gt;2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;20,"2019",2001,"USA","Francis Ford Coppola"&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="pass"&gt;2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;30,"Ojciec chrzestny",1972,"USA","Francis Ford Coppola"&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;3&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;40,"2018",2001,"USA","Francis Ford Coppola"&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;4&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;50,"Dwunastu gniewnych ludzi","BŁĘDNE DANE","USA","Sidney Lumet"&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="pass"&gt;4&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;60,"Forrest Gump","BŁĘDNE DANE","USA","Robert Zemeckis"&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="pass"&gt;4&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="4"&gt;fitness.Test_dodawania_kasety&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;dane&lt;/td&gt;
+		&lt;td&gt;id_filmu&lt;/td&gt;
+		&lt;td&gt;dodaj_kasete?&lt;/td&gt;
+		&lt;td&gt;liczba_kaset?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10, 123456&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;1&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;20, 999999&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;30, 987654&lt;/td&gt;
+		&lt;td&gt;20&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;1&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;40, 111111&lt;/td&gt;
+		&lt;td&gt;30&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;1&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;50, 121212&lt;/td&gt;
+		&lt;td&gt;40&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;1&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;60, 434343&lt;/td&gt;
+		&lt;td&gt;50&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="pass"&gt;0&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;70, 112211&lt;/td&gt;
+		&lt;td&gt;60&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="pass"&gt;0&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;80, 777777&lt;/td&gt;
+		&lt;td&gt;70&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="pass"&gt;0&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;70, 555555&lt;/td&gt;
+		&lt;td&gt;60&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="pass"&gt;0&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;80, 545454&lt;/td&gt;
+		&lt;td&gt;70&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="pass"&gt;0&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;90, 171717&lt;/td&gt;
+		&lt;td&gt;80&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="pass"&gt;0&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;91, 665566&lt;/td&gt;
+		&lt;td&gt;90&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="pass"&gt;0&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>DodawanieKasety</relativePageName>
+          </result>
+  <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>20</totalRunTimeInMillis>
+</testResults>
+
